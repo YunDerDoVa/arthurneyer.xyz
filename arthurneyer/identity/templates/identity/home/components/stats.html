@@ -1,45 +1,42 @@
-<section id="WORLDS" class="container">
+{% load static %}
 
-  <div class="d-flex flex-wrap justify-content-center align-items-center">
+<section id="STATS" class="container-fluid px-0 py-3">
 
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card service-card p-3">
-        <div class="card-body">
-          <i class="icon fas fa-code"></i>
-          <h2>WebDesigner & Développeur</h2>
-          <p>
-            Un projet est un assemblement de composants,
-            je suis celui qui va fluidifier les intéractions
-            avec la machine.
-          </p>
+  <div class="muggum_stats_parallax parallax-window" data-parallax="scroll" data-image-src="https://source.unsplash.com/0VGG7cqTwCo/720x420/">
+
+    <div class="overlay position-sm-absolute position-relative">
+
+      <div class="d-flex flex-wrap justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-12 col-lg-7">
+          <div class="row h-100">
+            <div class="col-12 col-md-4">
+              <div class="stat-zone">
+                <i class="fab fa-instagram"></i>
+                <h3>500+</h3>
+                <p>Photos sur Instagram</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="stat-zone">
+                <i class="fas fa-cloud"></i>
+                <h3>3</h3>
+                <p>Sites Web Réalisés</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="stat-zone">
+                <i class="fab fa-discord"></i>
+                <h3>Discord</h3>
+                <p>Visitez <a href="https://muggum.fr/">muggum.fr</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-5 d-flex justify-content-center align-items-center p-3">
+          <img class="img-cv img-fluid" src="{% static "identity\images\PhotoCVSmall.jpg" %}" alt="CV Photo">
         </div>
       </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card service-card p-3">
-        <div class="card-body">
-          <i class="icon fas fa-camera"></i>
-          <h2>Artiste & Alchimiste</h2>
-          <p>
-            La quête de la pierre philosophale... Qu'est-ce que ça veut
-            dire au juste ? Je fais des photos quand je mine du plomb,
-            puis je le transmute !
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card service-card p-3">
-        <div class="card-body">
-          <i class="icon fas fa-globe-americas"></i>
-          <h2>Aventurier de la Terre</h2>
-          <p>
-            Le monde est grand mais nous sommes petits. Ce monde est beau
-            mais je ne vois que du plastique. Ce monde est chaud, bientôt
-            je vivrai en antarctique.
-          </p>
-        </div>
-      </div>
+
     </div>
 
   </div>

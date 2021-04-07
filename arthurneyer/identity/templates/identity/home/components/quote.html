@@ -1,10 +1,34 @@
 <section id="QUOTE" class="container py-5">
 
-  <div class="quote-carousel">
-    <article class="quote text-center">
-      <p class="display-3">E = m.c&sup2</p>
-      <h6>Albert Einstein</h6>
-    </article>
+  <div id="quoteCarouselControls" class="quote-carousel carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#quoteCarouselControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#quoteCarouselControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item text-center p-5 active">
+        <article class="quote w-100 h-100">
+          <p class="display-3">Follow the White Rabbit</p>
+          <h6>The Matrix</h6>
+        </article>
+      </div>
+      <div class="carousel-item text-center p-5">
+        <article class="quote w-100 h-100">
+          <p class="display-3">
+            Look, it's a Butterfly !
+          </p>
+          <h6>I Am Legend</h6>
+        </article>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarouselControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#quoteCarouselControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
 </section>

@@ -1,47 +1,164 @@
-<section id="WORLDS" class="container">
+{% load static %}
 
-  <div class="d-flex flex-wrap justify-content-center align-items-center">
 
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card service-card p-3">
-        <div class="card-body">
-          <i class="icon fas fa-code"></i>
-          <h2>WebDesigner & Développeur</h2>
-          <p>
-            Un projet est un assemblement de composants,
-            je suis celui qui va fluidifier les intéractions
-            avec la machine.
-          </p>
+<section id="PORTFOLIO" class="container-fluid">
+
+  <h2 class="section-title pt-5">
+    Portfolio
+  </h2>
+
+  <h3 class="section-subtitle pb-5">
+    En vrac, mes images instagram, quelques projets web, des montages d'image
+    et peut-être un jour des musique variées.
+    Profitez bien du voyage ;)
+  </h3>
+
+  <div class="muggum_portfolio">
+    <div class="row">
+      <div class="col-12 col-md-4 g-0">
+
+        <div class="portfolio-item">
+          <div class="cover">
+            <img class="w-100" src="{% static "identity\portfolio\works\adenblack\sheila_power.ico" %}" alt="">
+          </div>
+          <div class="overlay">
+            <a class="action-button" href="https://adenblack.fr/">Voir Site Web</a>
+            <div class="text-content">
+              <h3>
+                AdenBlack
+              </h3>
+              <p>
+                Site Web commencé en Symfony puis refondu gratuitement en
+                Django suite à un changement d'architecture technique.
+              </p>
+            </div>
+            <div class="footer-infos">
+              <h2>Site Web</h2>
+              <h4>Pour Artiste en Audio-Visuel</h4>
+            </div>
+          </div>
         </div>
+
+        <div class="portfolio-item">
+          <div class="cover">
+            <img class="w-100" src="{% static "identity\portfolio\instagram\BabyMangoTree.jpg" %}" alt="">
+          </div>
+          <div class="overlay">
+            <a class="action-button" href="https://www.instagram.com/gsw_ww/">mon instagram</a>
+            <div class="footer-infos">
+              <h2>Photo Instagram</h2>
+              <h4>gsw_ww</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-4 g-0">
+
+        <div class="portfolio-item">
+          <div class="cover">
+            <img class="w-100" src="{% static "identity\portfolio\instagram\FireOnCoconut.jpg" %}" alt="">
+          </div>
+          <div class="overlay">
+            <a class="action-button" href="https://www.instagram.com/gsw_ww/">mon instagram</a>
+            <div class="footer-infos">
+              <h2>Photo Instagram</h2>
+              <h4>gsw_ww</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="cover">
+            <img class="w-100" src="{% static "identity\portfolio\muggum\muggum_2021_colors.svg" %}" alt="">
+          </div>
+          <div class="overlay">
+            <a class="action-button" href="https://adenblack.fr/">Notre Site Web</a>
+            <div class="text-content">
+              <h3>
+                MugguM
+              </h3>
+              <p>
+                Services Web :
+                <ul>
+                  <li>
+                    Création Web
+                  </li>
+                  <li>
+                    Développement Digital
+                  </li>
+                  <li>
+                    Accompagnement
+                  </li>
+                </ul>
+              </p>
+            </div>
+            <div class="footer-infos">
+              <h2>Création d'Entreprise</h2>
+              <h4>MugguM</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-md-4 g-0">
+
+        <div class="portfolio-item">
+          <div class="cover">
+            <img class="w-100" src="{% static "identity\portfolio\works\seve\logo.jpg" %}" alt="">
+          </div>
+          <div class="overlay">
+            <a class="action-button" href="https://seve-d-alsace.fr/">Voir Site Web</a>
+            <div class="text-content">
+              <h3>
+                Sève d'Alsace
+              </h3>
+              <p>
+                Au Service des Arbres et des Hommes
+              </p>
+            </div>
+            <div class="footer-infos">
+              <h2>Site Web</h2>
+              <h4>Pour Artiste en Audio-Visuel</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="cover">
+            <img class="w-100" src="{% static "identity\portfolio\instagram\Champipote.jpg" %}" alt="">
+          </div>
+          <div class="overlay">
+            <a class="action-button" href="https://www.instagram.com/gsw_ww/">mon instagram</a>
+            <div class="footer-infos">
+              <h2>Photo Instagram</h2>
+              <h4>gsw_ww</h4>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card service-card p-3">
-        <div class="card-body">
-          <i class="icon fas fa-camera"></i>
-          <h2>Artiste & Alchimiste</h2>
-          <p>
-            La quête de la pierre philosophale... Qu'est-ce que ça veut
-            dire au juste ? Je fais des photos quand je mine du plomb,
-            puis je le transmute !
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4">
-      <div class="card service-card p-3">
-        <div class="card-body">
-          <i class="icon fas fa-globe-americas"></i>
-          <h2>Aventurier de la Terre</h2>
-          <p>
-            Le monde est grand mais nous sommes petits. Ce monde est beau
-            mais je ne vois que du plastique. Ce monde est chaud, bientôt
-            je vivrai en antarctique.
-          </p>
-        </div>
-      </div>
-    </div>
+  </div>
 
+</section>
+
+<section id="CALL_TO_ACTION" class="container">
+
+  <div class="row py-5">
+    <div class="col-md-7 col-12">
+      <h3 class="px-3">Vous avez des projets qui ont besoin de l'appuie du monde Digital ?</h3>
+      <p class="px-3">
+        Saviez-vous qu'en moyenne, nous passons environ 4h30 sur Internet ?
+        Je travail pour qu'ils puissent profiter de leur voyage dans
+        la matrice ;) Le côté utile et pratique n'en reste pas moins important
+        car il permet de poser des limites à cette matrice qui occupe déjà trop
+        nos esprits.
+      </p>
+    </div>
+    <div class="col-md-5 col-12 d-flex justify-content-center align-items-center">
+      <a class="btn btn-secondary" href="https://www.instagram.com/gsw_ww/">Lien Vers la Matrice</a>
+    </div>
   </div>
 
 </section>
