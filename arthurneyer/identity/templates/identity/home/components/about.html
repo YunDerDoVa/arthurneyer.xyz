@@ -1,0 +1,167 @@
+<section id="ABOUT" class="container muggum_about">
+
+  <hr>
+
+  <h2 class="section-title">
+    A Propos de Moi
+  </h2>
+
+  <div class="row">
+    <div class="col-lg-4 col-md-12 col-12 p-3">
+      <article class="row">
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="col-lg-4 col-md-6 col-12">
+      <div class="d-flex h-100 justify-content-center align-items-center">
+        <article class="card story-card h-100 p-3">
+          <p class="text-center">
+            Codeur du Lundi, ce sont les week-ends qui m'ont menés vers des lundis
+            bien différents. J'ai commencé le python il y a 4 ans et le HTML il y a
+            7 ans. Dans le but de valider mes compétences acquises en autodidacte,
+            j'ai suivi le parcours OpenClassrooms intitulé
+            "Développement d'Applications Python" , ce qui m'a permit de me lancer
+            dans la vie active de développeur.
+          </p>
+        </article>
+
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-12">
+      <article class="row">
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+        <div class="col-12 p-2">
+          <div class="about-skill-title">
+            <h3>Python (+ Django) - 89%</h3>
+          </div>
+          <div class="about-skill-line">
+            <i class="about-skill-way" data-value='89'></i>
+            <i class="about-skill-anime" data-value='89'></i>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <h3 class="text-center my-3">Voyez aussi mes autres compétences</h3>
+
+  <article class="row">
+    <div class="col-12 col-md-4 p-2">
+      <div class="about-skill-title">
+        <h3>Python (+ Django) - 89%</h3>
+      </div>
+      <div class="about-skill-line">
+        <i class="about-skill-way" data-value='89'></i>
+        <i class="about-skill-anime" data-value='89'></i>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 p-2">
+      <div class="about-skill-title">
+        <h3>Python (+ Django) - 89%</h3>
+      </div>
+      <div class="about-skill-line">
+        <i class="about-skill-way" data-value='89'></i>
+        <i class="about-skill-anime" data-value='89'></i>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 p-2">
+      <div class="about-skill-title">
+        <h3>Python (+ Django) - 89%</h3>
+      </div>
+      <div class="about-skill-line">
+        <i class="about-skill-way" data-value='89'></i>
+        <i class="about-skill-anime" data-value='89'></i>
+      </div>
+    </div>
+  </article>
+
+
+
+</section>
+
+<script type="text/javascript">
+
+  var aboutSkills = document.querySelectorAll('.about-skill-anime');
+
+  function animeSkill(skill) {
+    var value = skill.dataset['value'];
+    var width = value + '%';
+    var opacity = value/100;
+
+    anime({
+      targets: skill,
+      opacity: [0, opacity],
+      duration: 1618,
+      width: width,
+      easing: 'easeInOutQuad',
+    });
+  }
+
+  for (var i = 0; i < aboutSkills.length; i++) {
+    var skill = aboutSkills[i];
+
+    animeSkill(skill);
+  }
+
+</script>

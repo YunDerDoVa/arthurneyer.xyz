@@ -1,0 +1,54 @@
+@import "colors"
+@import "univers_colors"
+
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800;900&display=swap')
+
+body
+  width: 100%
+  min-height: 100vh
+  overflow-x: hidden
+  overflow-y: scroll
+
+  h1, h2, h3, h4, h5, h6
+    font-family: 'MuseoModerno', cursive
+
+  p, a
+    font-family: 'Dosis', sans-serif
+
+a
+  color: #999
+  transition: 0.618s
+  &:hover
+    color: #fff
+    text-decoration: none
+
+section
+  & .section-title
+    font-weight: 300
+
+    text-align: center
+    text-transform: uppercase
+
+  & img.section-title-underline
+    max-width: 162px
+    max-height: 64px
+
+
+// Cards
+.service-card.card
+  background-color: hsla(0, 100, 100, 0) !important
+  border: none
+  text-align: center
+
+  & h1, h2, h3, h4, h5, h6
+    color: black !important
+    text-shadow: none !important
+
+  & h2
+    text-transform: uppercase
+
+  & i.icon
+    color: $color_3
+    font-size: 42px
+    padding-bottom: 21px
