@@ -53,8 +53,9 @@ class Portfolio(models.Model):
 
         for classname in portfolios_classnames:
             portfolio = eval(classname)
-            for item in portfolio.objects.order_by('homepage').all():
-                portfolios.append(item)
+            if portfolio.objects.count() > 0:
+                for item in portfolio.objects.order_by('homepage').all():
+                    portfolios.append(item)
 
         return portfolios
 
