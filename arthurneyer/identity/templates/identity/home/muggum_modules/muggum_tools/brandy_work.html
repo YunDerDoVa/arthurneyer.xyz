@@ -1,0 +1,31 @@
+<div class="portfolio-item brandy-work">
+  <div class="cover">
+    <img class="w-100" src="{{ item.image.url }}" alt="{{ item.alt_image }}">
+  </div>
+  <div class="overlay">
+    <a class="action-button" href="{{ item.link }}">{{ item.label_link }}</a>
+    <div class="text-content d-none d-sm-flex d-md-none d-xxl-flex">
+      {% if item.title %}
+        <h3 class="m-0">
+          {{ item.title }}
+        </h3>
+      {% endif %}
+      {% if item.description %}
+        <p>
+          {% autoescape off %}
+            {{ item.description }}
+          {% endautoescape %}
+        </p>
+      {% endif %}
+    </div>
+    <div class="footer-infos">
+      {% if item.get_portfolio_type == 'MUGGUM' or item.get_portfolio_type == 'WORK' %}
+        <h2>{{ item.work.title }}</h2>
+        <h4>{{ item.work.subtitle }}</h4>
+      {% elif item.get_portfolio_type == 'INSTA' %}
+        <h2>Photo Instagram</h2>
+        <h4>{{ item.insta_id }}</h4>
+      {% endif %}
+    </div>
+  </div>
+</div>
