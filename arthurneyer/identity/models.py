@@ -6,6 +6,9 @@ class Work(models.Model):
     title = models.CharField(max_length=63)
     subtitle = models.CharField(max_length=63)
 
+    def __str__(self):
+        return "{0} : {1} {2}".format(self.id, self.title, self.subtitle)
+
 
 class Portfolio(models.Model):
 
