@@ -31,15 +31,17 @@
       {% endblock js_head_modules %}
 
       {% block singularity %}
-        <link rel="stylesheet" href="{% static "singularity/universe_menu/css/top_head.css" %}">
-        <script src="{% static "singularity/universe_menu/js/top_head.js" %}" type="text/javascript"></script>
+        <link rel="stylesheet" href="{% static "singularity/css/univers_menu.css" %}">
+        <script src="{% static "singularity/js/singularity.js" %}" type="text/javascript"></script>
       {% endblock singularity %}
 
 
 
   </head>
 
-  <body id="singularity_body" onload="create_singularity_universe_menu(null)">
+  <body id="singularity_body" onload="javascript:initSingularity();"
+    data-badge="{% static 'singularity/universe_menu/images/clown_nebula_alpha.png' %}"
+    data-pagename="identity_home">
 
     {% block content %}{% endblock content %}
 

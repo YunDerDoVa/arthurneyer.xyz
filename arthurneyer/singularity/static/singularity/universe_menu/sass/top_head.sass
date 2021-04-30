@@ -3,11 +3,23 @@
 
 #singularity_universe_menu.menu_space_digital
     position: fixed
-    left: 77px
-    top: 77px
+    left: 7px
+    top: 7px
 
     width: 162px
     height: 162px
     border-radius: 81px
 
-    background-color: $color_3
+    //background-color: $color_3
+    background-size: cover
+    background-position: center
+
+    opacity: 0.3
+    transition-duration: 0.777s
+    &:hover
+      opacity: 1
+
+      animation-name: menuDpaceDigitalHover
+      animation-timing-function: ease-in-out
+      animation-iteration-count: infinite
+      animation-duration: 0.777s
