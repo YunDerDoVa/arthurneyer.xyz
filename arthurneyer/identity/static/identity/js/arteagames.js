@@ -80,21 +80,24 @@ class DontClickArtea {
   timeTravel(storyname) {
     var story = this.game.story[storyname];
 
-    this.game.dataset['']
     this.game.left.innerHTML = story.left;
     this.game.right.innerHTML = story.right;
 
-    if (story.next_left) {
-      this.game.left.href = "javascript:arteaGame.timeTravel('" + story.next_left + "')";
+    if (story.end_left == null) {
+      if (story.next_left) {
+        this.game.left.href = "javascript:arteaGame.timeTravel('" + story.next_left + "');";
+      }
     }
-    else if (story.end_left) {
+    else {
       this.game.left.href = story.end_left;
     }
 
-    if (story.next_right) {
-      this.game.right.href = "javascript:arteaGame.timeTravel('" + story.next_right + "')";
+    if (story.end_right == null) {
+      if (story.next_right) {
+        this.game.right.href = "javascript:arteaGame.timeTravel('" + story.next_right + "');";
+      }
     }
-    else if (story.end_right) {
+    else {
       this.game.right.href = story.end_right;
     }
 
@@ -106,8 +109,7 @@ class DontClickArtea {
     }
 
     if (story.clean_book) {
-      setTimeout(this.clearBook, 7777, this.game.book);
-
+      setTimeout(this.clearBook, story.clean_book, this.game.book);
     }
 
   }
@@ -119,7 +121,7 @@ class DontClickArtea {
         right: "tu peux cliquer",
         next_left: "noone",
         next_right: "clickone",
-        clean_book: true,
+        clean_book: 77777,
       },
       noone: {
         left: "fallait pas cliquer là",
@@ -127,19 +129,21 @@ class DontClickArtea {
         //end_left: "this.badEnd()",
         end_left: "#QUOTE",
         disabled_right: true,
+        clean_book: 7777,
       },
       clickone: {
         left: "tu peux cliquer mntnt",
         right: "tu peux plus cliquer",
         next_left: "clicktwo",
         next_right: "firsterror",
+        clean_book: 7777,
       },
       clicktwo: {
         left: "Tu es humain !",
         right: "Clique ici mntnt",
         //end_left: "this.robotEnd()",
         //end_right: "this.backToEnd()",
-        end_left: "#CONTACT",
+        end_left: "javascript:arteaGame.youAreHuman();",
         end_right: "javascript:arteaGame.backToEnd();",
       },
       firsterror: {
@@ -151,7 +155,7 @@ class DontClickArtea {
       congratulations: {
         left: "Tu es humain !",
         right: "Clique ici mntnt",
-        end_left: "#CONTACT",
+        end_left: "javascript:arteaGame.youAreHuman();",
         end_right: "javascript:arteaGame.backToEnd();",
       },
     };
@@ -164,6 +168,23 @@ class DontClickArtea {
 
   backToEnd() {
     this.game.book.innerHTML = "Bien Joué !";
+    this.timeTravel('init');
+  }
+
+  youAreHuman() {
+    var humanParagraph = document.createElement('p')
+    humanParagraph.innerHTML = "Bravo, tu as su prouver ta valeur au DonTClickArtea !";
+    humanParagraph.classList.add('text-center');
+    humanParagraph.classList.add('p-3');
+    this.game.book.appendChild(humanParagraph)
+
+    var githubLink = document.createElement('a');
+    githubLink.href = 'https://github.com/GoswaTech/';
+    githubLink.innerHTML = "Visite mon Git ;)";
+    githubLink.classList.add("btn");
+    githubLink.classList.add("btn-primary");
+    this.game.book.appendChild(githubLink);
+
     this.timeTravel('init');
   }
 
