@@ -42,11 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'identity.apps.IdentityConfig',
-<<<<<<< HEAD
     'singularity.apps.SingularityConfig',
-=======
     'greentea.apps.GreenteaConfig',
->>>>>>> master
 ]
 
 MIDDLEWARE = [
