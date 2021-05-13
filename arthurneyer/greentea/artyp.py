@@ -34,7 +34,7 @@ class ArtYp(object):
 
         if len(ipv4.split('.')) != 4:
             ipv6 = ipv4.split(':')
-            if len(ipv6 > 2):
+            if len(ipv6) > 2:
                 ipv4 = '777.{0}.{1}.{2}'.format(ipv6[0], ipv6[1], ipv6[2])
             else:
                 ipv4 = '333.444.444.333'
