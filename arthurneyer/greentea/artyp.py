@@ -24,12 +24,20 @@ class ArtYp(object):
         else:
             ip = request.META.get('REMOTE_ADDR')
 
-        print(ip)
+        print('[ArtYp] IP entrant : {0}'.format(ip))
 
         return ip
 
+
     @staticmethod
     def save_ip(ipv4):
+
+        if len(ipv4.split('.')) != 4:
+            ipv6 = ipv4.split(':')
+            if len(ipv6 > 2):
+                ipv4 = '777.{0}.{1}.{2}'.format(ipv6[0], ipv6[1], ipv6[2])
+            else:
+                ipv4 = '333.444.444.333'
 
         lay_a, lay_b, lay_c, lay_d = ipv4.split('.')
 
