@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'identity.apps.IdentityConfig',
+    'greentea.apps.GreenteaConfig',
 ]
 
 MIDDLEWARE = [
