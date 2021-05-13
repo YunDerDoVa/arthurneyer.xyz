@@ -8,6 +8,9 @@ class ArtisticIp(models.Model):
     lay_c = models.CharField(max_length=3)
     lay_d = models.CharField(max_length=3)
 
+    def __str__(self):
+        return '{0}.{1}.{2}.{3}'.format(self.lay_a, self.lay_b, self.lay_c, self.lay_d)
+
     def color(self):
         return self.lay_a_color()
 
