@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'singularity.apps.SingularityConfig',
     'identity.apps.IdentityConfig',
     'singularity.apps.SingularityConfig',
     'greentea.apps.GreenteaConfig',
