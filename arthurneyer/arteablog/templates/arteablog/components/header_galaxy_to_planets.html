@@ -3,10 +3,10 @@
   <p class="description">
     Voyez les derniers articles que j'ai écris, juste là !
   </p>
-  <div class="solaris">
-    {% for category in categories %}
+  {% for category in categories %}
+    <div class="solaris">
+      <h4>{{ article.astral_category }}</h4>
       {% if article.category == category %}
-        <h4>{{ article.astral_category }}</h4>
         <div class="planet">
           <h5>{{ article.astral_name }}</h5>
           <p class="description">
@@ -14,7 +14,7 @@
           </p>
         </div>
       {% endif %}
-    {% endfor %}
-  </div>
+    </div>
+  {% endfor %}
 
 </div>

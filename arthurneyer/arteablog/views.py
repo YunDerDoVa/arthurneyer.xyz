@@ -4,9 +4,11 @@ from django.shortcuts import render
 def blog(request):
 
     articles = Article.objects.filter(online=True)
+    categories = Article.get_categories_from(articles)
 
     context = {
         'articles': articles,
+        'categories': categories,
     }
 
     return render(request, 'arteablog/blog/index.html', context)
