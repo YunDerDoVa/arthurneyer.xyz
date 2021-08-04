@@ -1,19 +1,26 @@
 <div class="galaxy">
+
   <h3>Artea Blog</h3>
+  
   <p class="description">
     Voyez les derniers articles que j'ai écris, juste là !
   </p>
+
   {% for category in categories %}
     <div class="solaris">
-      <h4>{{ article.astral_category }}</h4>
-      {% if article.category == category %}
+      <h4>{{ category.name }}</h4>
+
+      {% for article in articles %}
+        {% if article.category == category %}
         <div class="planet">
           <h5>{{ article.astral_name }}</h5>
           <p class="description">
             {{ article.astral_description }}
           </p>
         </div>
-      {% endif %}
+        {% endif %}
+      {% endfor %}
+
     </div>
   {% endfor %}
 
