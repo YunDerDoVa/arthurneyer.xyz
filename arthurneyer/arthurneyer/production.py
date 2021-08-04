@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'singularity.apps.SingularityConfig',
     'identity.apps.IdentityConfig',
     'greentea.apps.GreenteaConfig',
+    'arteablog.apps.ArteablogConfig',
 ]
 
 MIDDLEWARE = [

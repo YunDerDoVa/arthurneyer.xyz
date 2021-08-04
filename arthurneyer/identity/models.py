@@ -12,8 +12,17 @@ class Work(models.Model):
 
 class Portfolio(models.Model):
 
+    PLANET_SIZES = [
+        ('small', 'Small'),
+        ('medium', 'Medium'),
+        ('big', 'Big'),
+    ]
+
     name = models.CharField(max_length=63)
     homepage = models.CharField(max_length=7, null=True, blank=True)
+
+    energy = models.SmallIntegerField(default=1)
+    planet_size = models.CharField(max_length=63, choices=PLANET_SIZES, null=True, default=PLANET_SIZES[0][0])
 
     image = models.ImageField(upload_to="images/portfolio/")
     alt_image = models.TextField(max_length=255)
@@ -53,7 +62,7 @@ class Portfolio(models.Model):
 
         for classname in portfolios_classnames:
             portfolio = eval(classname)
-            if portfolio.objects.order_by('homepage').first() != None:
+            if portfolio.objects.order_by('-energy').first() != None:
                 for item in portfolio.objects.order_by('homepage').all():
                     portfolios.append(item)
 
