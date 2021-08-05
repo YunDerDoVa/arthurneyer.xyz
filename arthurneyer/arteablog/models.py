@@ -11,7 +11,11 @@ class Article(models.Model):
 
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
 
+    cover = models.ImageField(upload_to="blog/article/covers/", null=True)
+    astral_cover = models.ImageField(upload_to="astral/blog/article/covers/", null=True)
+
     article = models.TextField(max_length=4095)
+    astral_article = models.TextField(max_length=4095)
 
     creation_date = models.DateField(auto_now_add=True)
     last_update_date = models.DateField(auto_now=True)
