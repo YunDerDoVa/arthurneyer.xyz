@@ -10,7 +10,6 @@ class Article(models.Model):
     astral_description = models.TextField(max_length=127)
 
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True)
-    slug = models.SlugField(max_length=63, null=True)
 
     article = models.TextField(max_length=4095)
 
@@ -29,8 +28,14 @@ class Article(models.Model):
 
         return categories
 
+    def __str__(self):
+        return self.name
+
 
 class Category(models.Model):
 
     name = models.CharField(max_length=63, unique=True)
     description = models.CharField(max_length=127)
+
+    def __str__(self):
+        return self.name
