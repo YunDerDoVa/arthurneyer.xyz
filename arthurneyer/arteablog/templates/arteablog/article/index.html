@@ -1,0 +1,44 @@
+{% extends "singularity/base.html" %}
+
+{% load static %}
+
+
+{% block stylesheets %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static "arteablog/css/galaxy.css" %}">
+  <link rel="stylesheet" href="{% static "arteablog/css/solaris.css" %}">
+  <link rel="stylesheet" href="{% static "arteablog/css/planet.css" %}">
+{% endblock stylesheets %}
+
+{% block js_head_modules %}
+  {{ block.super }}
+  {% block ParallaxJS %}
+    <!-- ParallaxJS -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+  {% endblock ParallaxJS %}
+  {% block MugguM %}
+    <!-- MugguM CSS -->
+    <link rel="stylesheet" href="{% static 'identity/css/muggum.css' %}">
+  {% endblock MugguM %}
+  {% block AnimeJS %}
+    <!-- AnimeJS -->
+    <script src="{% static "node_modules/animejs/lib/anime.min.js" %}"></script>
+  {% endblock AnimeJS %}
+{% endblock js_head_modules %}
+
+{% block content %}
+
+  {% include "identity/home/components/parallax_header.html" %}
+  {% include "identity/home/components/worlds.html" %}
+  {% include "identity/home/components/about.html" %}
+  {% include "identity/home/components/quote.html" %}
+  {% include "identity/home/components/stats.html" %}
+  {% include "identity/home/components/portfolio.html" %}
+  {% include "identity/home/components/contact.html" %}
+  {% include "identity/home/components/footer.html" %}
+
+{% endblock content %}
+
+{% block javascripts %}
+  {{ block.super }}
+{% endblock javascripts %}

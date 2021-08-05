@@ -1,52 +1,57 @@
-<div class="galaxy container shadow">
+<div class="container">
+  <div class="galaxy shadow">
 
-  <h3 class="title">Artea Blog</h3>
+    <h3 class="title shadow">
+      Artea Blog
+      <a class="clickable-filter" href="{% url 'blog' %}"></a>
+    </h3>
 
-  <p class="description">
-    Voyez les derniers articles que j'ai écris, juste là !
-  </p>
+    <p class="description">
+      Voyez les derniers articles que j'ai écris, juste là !
+    </p>
 
-  <div class="solaris-zone">
+    <div class="solaris-zone">
 
-    {% for category in categories %}
-      <div class="solaris shadow">
-        <h4>{{ category.name }}</h4>
-        <div class="planet-zone">
+      {% for category in categories %}
+        <div class="solaris shadow">
+          <h4>{{ category.name }}</h4>
+          <div class="planet-zone">
 
-          {% for article in articles %}
-            {% if article.category == category %}
+            {% for article in articles %}
+              {% if article.category == category %}
 
-              <div class="planet-from-galaxy">
+                <div class="planet-from-galaxy">
 
-                <div class="planet-background">
-                  <div class="spinner-box">
-                    <div class="blue-orbit leo">
-                      <img class="background planet-background" src="https://source.unsplash.com/EXSWs3H4TSg/333x333/" alt="Alchemya Dépôt-Vente">
-                    </div>
-                    <div class="green-orbit leo">
-                      <img class="background planet-background" src="https://source.unsplash.com/EXSWs3H4TSg/333x333/" alt="Alchemya Dépôt-Vente">
-                    </div>
-                    <div class="red-orbit leo">
-                      <img class="background planet-background" src="https://source.unsplash.com/EXSWs3H4TSg/333x333/" alt="Alchemya Dépôt-Vente">
+                  <div class="planet-background">
+                    <div class="spinner-box">
+                      <div class="blue-orbit leo">
+                        <img class="background planet-background" src="https://source.unsplash.com/EXSWs3H4TSg/333x333/" alt="Alchemya Dépôt-Vente">
+                      </div>
+                      <div class="green-orbit leo">
+                        <img class="background planet-background" src="https://source.unsplash.com/EXSWs3H4TSg/333x333/" alt="Alchemya Dépôt-Vente">
+                      </div>
+                      <div class="red-orbit leo">
+                        <img class="background planet-background" src="https://source.unsplash.com/EXSWs3H4TSg/333x333/" alt="Alchemya Dépôt-Vente">
+                      </div>
                     </div>
                   </div>
+
+                  <div class="planet-foreground">
+                    <h5>{{ article.astral_name }}</h5>
+                  </div>
+
+                  <a class="clickable-filter circle" href="{% url 'article' id=article.id %}"></a>
+
                 </div>
 
-                <div class="planet-foreground">
-                  <h5>{{ article.astral_name }}</h5>
-                </div>
+              {% endif %}
+            {% endfor %}
 
-                <a class="clickable-filter circle" href="#"></a>
-
-              </div>
-
-            {% endif %}
-          {% endfor %}
-
+          </div>
         </div>
-      </div>
-    {% endfor %}
+      {% endfor %}
+
+    </div>
 
   </div>
-
 </div>

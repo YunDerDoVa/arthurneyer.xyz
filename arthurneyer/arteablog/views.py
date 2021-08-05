@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from .models import Article
+
+
 # Create your views here.
 def blog(request):
 
@@ -16,7 +19,7 @@ def blog(request):
 
 def article(request, id):
 
-    article = Article.objects.filter(id).first()
+    article = Article.objects.filter(id=id).first()
 
     context = {
         'article': article,

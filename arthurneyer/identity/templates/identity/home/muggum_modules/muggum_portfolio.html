@@ -1,17 +1,17 @@
 <div class="muggum_portfolio">
-  <div class="row solaris">
+  <div class="row portfolio-solaris">
 
     {% for item in portfolio %}
       {% if item.planet_size == 'small' %}
-        <div class="col-12 col-md-4 planet planet-small">
+        <div class="col-12 col-md-4 portfolio-planet planet-small">
           {% include "identity/home/muggum_modules/muggum_tools/brandy_work.html" %}
         </div>
       {% elif item.planet_size == 'medium' %}
-        <div class="col-12 col-md-8 planet planet-medium">
+        <div class="col-12 col-md-8 portfolio-planet planet-medium">
           {% include "identity/home/muggum_modules/muggum_tools/brandy_work.html" %}
         </div>
       {% elif item.planet_size == 'small' %}
-        <div class="col-12 col-md-12 planet planet-big">
+        <div class="col-12 col-md-12 portfolio-planet planet-big">
           {% include "identity/home/muggum_modules/muggum_tools/brandy_work.html" %}
         </div>
       {% endif %}
