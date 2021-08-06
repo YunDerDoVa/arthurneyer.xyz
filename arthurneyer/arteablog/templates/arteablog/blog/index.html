@@ -5,6 +5,7 @@
 
 {% block stylesheets %}
   {{ block.super }}
+  <link rel="stylesheet" href="{% static "arteablog/css/artea.css" %}">
   <link rel="stylesheet" href="{% static "arteablog/css/galaxy.css" %}">
   <link rel="stylesheet" href="{% static "arteablog/css/solaris.css" %}">
   <link rel="stylesheet" href="{% static "arteablog/css/planet.css" %}">
@@ -29,6 +30,7 @@
 {% block content %}
 
   {% include "arteablog/components/parallax_header.html" %}
+  {% include "arteablog/blog/show_solaris.html" %}
   {% include "identity/home/components/quote.html" %}
   {% include "identity/home/components/contact.html" %}
   {% include "identity/home/components/footer.html" %}
