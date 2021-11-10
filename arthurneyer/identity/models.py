@@ -19,7 +19,7 @@ class Portfolio(models.Model):
     ]
 
     name = models.CharField(max_length=63)
-    homepage = models.CharField(max_length=7, null=True, blank=True)
+    #homepage = models.CharField(max_length=7, null=True, blank=True)
 
     energy = models.SmallIntegerField(default=1)
     planet_size = models.CharField(max_length=63, choices=PLANET_SIZES, null=True, default=PLANET_SIZES[0][0])
@@ -45,7 +45,7 @@ class Portfolio(models.Model):
         return self.name
 
     def __lt__(self, other):
-        return float(self.homepage) < float(other.homepage)
+        return float(self.energy) < float(other.energy)
 
     def get_portfolio_type(self):
         return 'BASE'
@@ -62,9 +62,13 @@ class Portfolio(models.Model):
 
         for classname in portfolios_classnames:
             portfolio = eval(classname)
-            if portfolio.objects.order_by('-energy').first() != None:
-                for item in portfolio.objects.order_by('homepage').all():
-                    portfolios.append(item)
+            if portfolio.objects.first() != None:
+                try:
+                    for item in portfolio.objects.order_by('-energy').all():
+                        portfolios.append(item)
+                except:
+                    for item in portfolio.objects.all():
+                        portfolios.append(item)
 
         return portfolios
 

@@ -15,7 +15,7 @@ def home(request):
     ArtYp.save_ip(ArtYp.get_ip_with_django(request=request))
 
     portfolio = Portfolio.get_all_portfolios()
-    portfolio.sort()
+    portfolio.sort(reverse=True)
 
     articles = Article.objects.filter(online=True).order_by('-last_update_date')[:3]
     categories = Article.get_categories_from(articles)

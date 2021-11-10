@@ -40,6 +40,7 @@ class Category(models.Model):
 
     name = models.CharField(max_length=63, unique=True)
     description = models.CharField(max_length=127)
+    cover = models.ImageField(upload_to="blog/category/covers/", null=True)
 
     def __str__(self):
         return self.name
