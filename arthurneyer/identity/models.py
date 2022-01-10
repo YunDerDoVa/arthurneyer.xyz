@@ -38,6 +38,8 @@ class Portfolio(models.Model):
 
     description = models.TextField(max_length=255, null=True, blank=True)
 
+    online = models.BooleanField(default=False)
+
     class Meta:
         abstract = True
 
@@ -45,6 +47,12 @@ class Portfolio(models.Model):
         return self.name
 
     def __lt__(self, other):
+        if self.energy == None:
+            self.energy = 0
+
+        if other.energy == None:
+            other.energy = 0
+
         return float(self.energy) < float(other.energy)
 
     def get_portfolio_type(self):
@@ -64,10 +72,10 @@ class Portfolio(models.Model):
             portfolio = eval(classname)
             if portfolio.objects.first() != None:
                 try:
-                    for item in portfolio.objects.order_by('-energy').all():
+                    for item in portfolio.objects.filter(online=True).order_by('-energy').all():
                         portfolios.append(item)
                 except:
-                    for item in portfolio.objects.all():
+                    for item in portfolio.objects.filter(online=True).all():
                         portfolios.append(item)
 
         return portfolios
