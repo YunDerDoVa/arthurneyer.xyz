@@ -38,6 +38,8 @@ class Portfolio(models.Model):
 
     description = models.TextField(max_length=255, null=True, blank=True)
 
+    online = models.BooleanField(default=False)
+
     class Meta:
         abstract = True
 
@@ -70,10 +72,10 @@ class Portfolio(models.Model):
             portfolio = eval(classname)
             if portfolio.objects.first() != None:
                 try:
-                    for item in portfolio.objects.order_by('-energy').all():
+                    for item in portfolio.objects.filter(online=True).order_by('-energy').all():
                         portfolios.append(item)
                 except:
-                    for item in portfolio.objects.all():
+                    for item in portfolio.objects.filter(online=True).all():
                         portfolios.append(item)
 
         return portfolios
