@@ -13,7 +13,12 @@
         {#% include "arteagames/dontclickartea.html" %#}
 
         <div class="col-12">
-          {% include "arteablog/components/header_galaxy_to_planets.html" %}
+          {% if categories %}
+            {% include "arteablog/components/header_galaxy_to_planets.html" %}
+          {% else %}
+            {% include "arteagames/dontclickartea.html" %}
+            <script type="text/javascript" src="{% static "singularity/js/arteagames.js" %}"></script>
+          {% endif %}
         </div>
 
     </div>

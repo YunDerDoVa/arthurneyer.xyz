@@ -25,4 +25,4 @@ def article(request, id):
         'article': article,
     }
 
-    return render(request, 'arteablog/blog/index.html', context)
+    return render(request, 'arteablog/article/index.html', context)

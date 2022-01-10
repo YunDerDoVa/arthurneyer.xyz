@@ -23,7 +23,7 @@ def home(request):
     context = {
         'portfolio': portfolio,
         'articles': articles,
-        'categories': categories,
+        'categories': categories if len(categories) > 0 else None,
     }
 
     return render(request, 'identity/home/index.html', context)

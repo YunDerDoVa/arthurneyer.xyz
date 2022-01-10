@@ -1,0 +1,28 @@
+{% load static %}
+
+<header>
+  <div class="article-parallax">
+
+    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static "arteablog/img/blog_parallax_img.png" %}">
+      <div class="overlay">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100 p-2">
+          <h1 class="text-center">
+            <a href="{% url 'blog' %}">
+              Galaxy Blog
+            </a>
+          </h1>
+          <h2 class="text-center">
+            System {{ article.category.name }}
+          </h2>
+          <h3 class="text-center">
+            {{ article.category.description }}
+          </h3>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+
+<!--script type="text/javascript" src="{% static "singularity/js/arteagames.js" %}"></script-->

@@ -5,6 +5,7 @@
 
 {% block stylesheets %}
   {{ block.super }}
+  <link rel="stylesheet" href="{% static "arteablog/css/artea.css" %}">
   <link rel="stylesheet" href="{% static "arteablog/css/galaxy.css" %}">
   <link rel="stylesheet" href="{% static "arteablog/css/solaris.css" %}">
   <link rel="stylesheet" href="{% static "arteablog/css/planet.css" %}">
@@ -28,14 +29,11 @@
 
 {% block content %}
 
-  {% include "identity/home/components/parallax_header.html" %}
-  {% include "identity/home/components/worlds.html" %}
-  {% include "identity/home/components/about.html" %}
-  {% include "identity/home/components/quote.html" %}
-  {% include "identity/home/components/stats.html" %}
-  {% include "identity/home/components/portfolio.html" %}
-  {% include "identity/home/components/contact.html" %}
-  {% include "identity/home/components/footer.html" %}
+{% include "arteablog/components/article_parallax_header.html" %}
+{% include "arteablog/article/show_planet.html" %}
+{% include "identity/home/components/quote.html" %}
+{% include "identity/home/components/contact.html" %}
+{% include "identity/home/components/footer.html" %}
 
 {% endblock content %}
 
