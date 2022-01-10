@@ -45,6 +45,12 @@ class Portfolio(models.Model):
         return self.name
 
     def __lt__(self, other):
+        if self.energy == None:
+            self.energy = 0
+
+        if other.energy == None:
+            other.energy = 0
+
         return float(self.energy) < float(other.energy)
 
     def get_portfolio_type(self):
