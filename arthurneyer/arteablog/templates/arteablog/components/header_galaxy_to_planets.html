@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="galaxy shadow">
+
+    <h3 class="title shadow">
+      Artea Blog
+      <a class="clickable-filter" href="{% url 'blog' %}"></a>
+    </h3>
+
+    <p class="description">
+      Voyez les derniers articles que j'ai écris, juste là !
+    </p>
+
+    <div class="solaris-zone">
+
+      {% for category in categories %}
+        <div class="solaris shadow">
+          <h4 class="title">{{ category.name }}</h4>
+          <div class="planet-zone">
+
+            {% for article in articles %}
+              {% if article.category == category %}
+
+                <div class="planet-from-galaxy">
+
+                  {% include "arteablog/components/planet_background.html" %}
+
+                  <div class="planet-foreground">
+                    <h5 class="title">{{ article.astral_name }}</h5>
+                  </div>
+
+                  <a class="clickable-filter circle" href="{% url 'article' id=article.id %}"></a>
+
+                </div>
+
+              {% endif %}
+            {% endfor %}
+
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</div>

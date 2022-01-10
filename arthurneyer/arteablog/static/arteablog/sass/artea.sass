@@ -1,0 +1,44 @@
+@import "univers_colors"
+
+.background
+  z-index: 0
+
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+  height: 100%
+
+img.background
+  object-fit: cover
+  object-position: center
+
+.foreground
+  z-index: 7
+
+  position: relative
+
+  width: 100%
+  height: 100%
+
+header
+  position: sticky
+  top: 0
+
+.article-parallax
+  position: relative
+  max-height: 33vh
+
+  background-color: rgba(255, 255, 255, .21)
+  text-shadow: 0 0 12px white
+
+  overflow: hidden
+
+  & .parallax-window
+    overflow: hidden
+
+  & h1, h2, h3, h4, h5, h6
+    color: $color_1
+    & a
+      color: $color_1

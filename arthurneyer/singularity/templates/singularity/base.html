@@ -17,6 +17,7 @@
         <!-- Artea CSS -->
         <link rel="stylesheet" href="{% static 'singularity/css/master.css' %}">
         <link rel="stylesheet" href="{% static 'singularity/css/univers.css' %}">
+        <link rel="stylesheet" href="{% static 'singularity/css/filters.css' %}">
       {% endblock stylesheets %}
 
       {% block js_head_modules %}
@@ -31,17 +32,18 @@
       {% endblock js_head_modules %}
 
       {% block singularity %}
-        <link rel="stylesheet" href="{% static "singularity/css/univers_menu.css" %}">
-        <script src="{% static "singularity/js/singularity.js" %}" type="text/javascript"></script>
+        <!--link rel="stylesheet" href="{% static "singularity/css/univers_menu.css" %}">
+        <script src="{% static "singularity/js/singularity.js" %}" type="text/javascript"></script-->
       {% endblock singularity %}
 
 
 
   </head>
 
-  <body id="singularity_body" onload="javascript:initSingularity();"
+  <!--body id="singularity_body" onload="javascript:initSingularity();"
     data-badge="{% static 'singularity/universe_menu/images/clown_nebula_alpha.png' %}"
-    data-pagename="identity_home">
+    data-pagename="identity_home"-->
+  <body id="singularity_body">
 
     {% block content %}{% endblock content %}
 

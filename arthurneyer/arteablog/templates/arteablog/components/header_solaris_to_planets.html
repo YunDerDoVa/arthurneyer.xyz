@@ -1,0 +1,24 @@
+<div class="solaris shadow">
+  <h4 class="title">{{ category.name }}</h4>
+  <div class="planet-zone">
+
+    {% for article in articles %}
+      {% if article.category == category %}
+
+        <div class="planet-from-galaxy">
+
+          {% include "arteablog/components/planet_background.html" %}
+
+          <div class="planet-foreground">
+            <h5 class="title">{{ article.astral_name }}</h5>
+          </div>
+
+          <a class="clickable-filter circle" href="{% url 'article' id=article.id %}"></a>
+
+        </div>
+
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="solaris shadow">
+  <img class="background" src="{{ category.cover.url }}" alt="Solaris Background">
+  <i class="filter white"></i>
+  <h4 class="px-2 title text-dark">{{ category.name }}</h4>
+  <div class="planet-zone">
+
+    {% for article in articles %}
+      {% if article.category == category %}
+
+        <div class="planet-from-solaris">
+
+          {% include "arteablog/components/planet_background.html" %}
+
+          <div class="planet-foreground">
+            <h5 class="title">{{ article.astral_name }}</h5>
+          </div>
+
+          <a class="clickable-filter circle with-span" href="{% url 'article' id=article.id %}">
+            <span>
+              {{ article.name }}
+            </span>
+          </a>
+
+        </div>
+
+      {% endif %}
+    {% endfor %}
+
+  </div>
+</div>

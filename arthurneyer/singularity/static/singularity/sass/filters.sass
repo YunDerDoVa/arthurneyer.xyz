@@ -1,0 +1,56 @@
+@import "univers_colors"
+
+
+i.filter, a.clickable-filter
+  &.with-span
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: nowrap
+
+    background-color: $color_1_alpha_42
+
+    &:hover
+      opacity: 1
+
+    & span
+      padding: 12px
+      text-align: center
+      font-weight: 700
+      font-size: 24px
+      color: $color_4
+
+i.filter
+  z-index: 3
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+  height: 100%
+
+  &.white
+    background-color: rgba(255, 255, 255, 0.42)
+
+  &.black
+    background-color: rgba(0, 0, 0, 0.42)
+
+a.clickable-filter
+  z-index: 77
+  position: absolute
+  top: 0
+  left: 0
+
+  width: 100%
+  height: 100%
+
+  background-color: $color_2_alpha_42
+
+  opacity: 0
+
+  &:hover
+    opacity: .42
+
+  &.circle
+    border-radius: 777px

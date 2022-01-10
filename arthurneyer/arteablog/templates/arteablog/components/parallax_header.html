@@ -1,0 +1,30 @@
+{% load static %}
+
+<header class="uniVers_parallax parallax-window mb-3" data-parallax="scroll" data-image-src="{% static "arteablog/img/blog_parallax_img.png" %}">
+  <div class="overlay">
+    <div class="d-flex flex-column justify-content-center align-items-center h-100 p-2">
+      <h1 class="text-center">Galaxy Blog</h1>
+      <h2 class="text-center">On verra bien ce que je vais écrire ici ;)</h2>
+
+      <div class="col-7 col-md-4 col-lg-3">
+        <hr>
+      </div>
+
+      <div class="col-12">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-center align-items-stretch text-light">
+
+            {% for category in categories %}
+              {% include "arteablog/components/header_solaris_to_planets.html" %}
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!--script type="text/javascript" src="{% static "singularity/js/arteagames.js" %}"></script-->
