@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'identity.apps.IdentityConfig',
     'greentea.apps.GreenteaConfig',
     'arteablog.apps.ArteablogConfig',
+    'markdown_deux',
 ]
 
 MIDDLEWARE = [
