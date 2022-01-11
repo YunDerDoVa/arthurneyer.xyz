@@ -5,12 +5,9 @@ echo "Vous avez entré la commande \"$0, $1\""
 if [[ $1 == 'all' ]]; then
   #statements
   python -m venv venv
-  source venv/bin/activate & pip install -r requirements.txt
-  cd identity/static/ & npm install
 elif [[ $1 == 'requirements' ]]; then
   #statements
-  source venv/bin/activate & pip install -r requirements.txt
-  cd identity/static/ & npm install
+  pip install -r requirements.txt
 elif [[ $1 == 'statics' ]]; then
   #statements
   yarn install --modules-folder identity/static/node_modules/
