@@ -24,11 +24,32 @@
     <!-- AnimeJS -->
     <script src="{% static "node_modules/animejs/lib/anime.min.js" %}"></script>
   {% endblock AnimeJS %}
+  {% block FacebookSDK %}
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1531537063892707',
+        xfbml      : true,
+        version    : 'v12.0'
+      });
+      FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  {% endblock FacebookSDK %}
 {% endblock js_head_modules %}
 
 {% block content %}
 
   {% include "identity/home/components/parallax_header.html" %}
+  {% include "identity/home/3rtea_modules/compass.html" %}
   {% include "identity/home/components/worlds.html" %}
   {% include "identity/home/components/about.html" %}
   {% include "identity/home/components/quote.html" %}

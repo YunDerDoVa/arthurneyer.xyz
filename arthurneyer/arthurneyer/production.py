@@ -27,6 +27,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-qi=3pcsyw)rl#@85xj=
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') != 'False'
 
 ALLOWED_HOSTS = [
+    'cv.arthurneyer.xyz',
     'arthurneyer.xyz',
     'zif.adenblack.fr',
 ]

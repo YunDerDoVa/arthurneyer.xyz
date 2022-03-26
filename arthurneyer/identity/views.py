@@ -27,3 +27,11 @@ def home(request):
     }
 
     return render(request, 'identity/home/index.html', context)
+
+
+def privacy(request):
+
+    context = {
+    }
+
+    return render(request, 'identity/legacy/privacy.html', context)
