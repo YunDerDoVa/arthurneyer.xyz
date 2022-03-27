@@ -1,0 +1,17 @@
+<nav class="compass">
+  <div class="parents">
+    {% for link in compass.parents %}
+      <a href="{% url 'link.slug' %}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+  <div class="current">
+    {% for link in compass.current %}
+      <a href="{% url 'link.slug' %}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+  <div class="childs">
+    {% for link in compass.childs %}
+      <a href="{% url 'link.slug' %}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</nav>

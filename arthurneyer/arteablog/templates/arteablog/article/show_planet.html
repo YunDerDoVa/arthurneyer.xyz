@@ -4,19 +4,21 @@
 <div class="container py-3">
 
   <div class="row g-2 pt-3">
-    <h6 class="col-12">
-      {{ article.description }}
-    </h6>
-    <h6 class="col-12">
-      {{ article.astral_description }}
-    </h6>
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 offset-0 offset-sm-1 offset-md-2 offset-lg-3">
+      <h6 class="col-12">
+        {{ article.description }}
+      </h6>
+      <div class="display-5 fs-4">
+        {{ article.article|markdown }}
+      </div>
+    </div>
   </div>
 
   <div class="row g-2 pt-5">
     <div class="col-12 col-sm-10 col-md-8 col-lg-6 offset-0 offset-sm-1 offset-md-2 offset-lg-3">
-      <div class="display-5 fs-4">
-        {{ article.article|markdown }}
-      </div>
+      <h6 class="col-12">
+        {{ article.astral_description }}
+      </h6>
       <hr class="mx-5">
       <div class="display-5 fs-4">
         {{ article.astral_article|markdown }}
