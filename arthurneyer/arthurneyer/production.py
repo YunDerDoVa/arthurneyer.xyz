@@ -29,6 +29,7 @@ DEBUG = os.getenv('DJANGO_DEBUG', 'False') != 'False'
 ALLOWED_HOSTS = [
     'arthurneyer.xyz',
     'zif.adenblack.fr',
+    'cv.3rtea.world',
 ]
 
 
