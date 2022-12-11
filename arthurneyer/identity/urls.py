@@ -4,4 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="identity_home"),
+    path('legacy/privacy/', views.privacy, name="privacy"),
+    path('legacy/termsandconditions/', views.terms, name="terms"),
 ]
